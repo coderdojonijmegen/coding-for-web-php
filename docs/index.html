@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>coding-for-web</title>
+<title>coding-for-web-php</title>
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans"
 	rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -10,7 +10,7 @@
 <body>
 	<div class="content">
 
-		<h1>coding-for-web</h1>
+		<h1>coding-for-web-PHP</h1>
 
 		<div id="inhoud">
 			<h2>Inhoud</h2>
@@ -29,6 +29,9 @@
 			</div>
 			<h2>Introductie</h2>
 			<p>
+			De meestgebruikte programmeertaal voor websites is PHP. Het is een heel handige taal waarmee je een eigen slimme website kunt bouwen.
+			</p><p>
+			Je gaat nu leren hoe PHP werkt, en dat doe je door een online vriendenboek te maken. Je leert informatie op te slaan, hoe je uitrekend hoeveel dagen oud je vrienden zijn, en hoe je een plaatje maakt met hun lievelingskleur.
 			</p>
 		</div>
 
@@ -38,6 +41,16 @@
 			</div>
 			<h2>Benodigdheden</h2>
 			<p>
+			Als je websites wil bouwen met PHP, heb je een plek nodig waar je software kunt schrijven. We gebruiken nu CodeAnywhere. Daar kun je oefenen met PHP, en zie je ook meteen hoe het resultaat eruitziet.
+			</p><p>
+			Als je je niet eerder hebt aangemeld, ga dan naar <a href="https://codeanywhere.com/signup" target="_blank">https://codeanywhere.com/signup</a>.
+			Vul je mailadres in, een wachtwoord, kruis het hokje aan, en klik op ‘register’.
+			Open het mailtje dat CodeAnywhere je gestuurd heeft om op de link te klikken.
+			Ga door naar de editor: <a href="https://codeanywhere.com/editor" target="_blank">https://codeanywhere.com/editor</a>.
+			</p><p>
+			In het scherm dat je daar ziet, vul je eerst je naam in.
+			Bij ‘Search stack’ vul je PHP7 in, en dan klik je op PHP 7 in de lijst daaronder.
+			Klik onderaan op ‘create’ en wacht af.
 			</p>
 		</div>
 
@@ -46,7 +59,122 @@
 				<a title="terug naar inhoud" href="#inhoud"><i class="material-icons">arrow_upward</i></a>
 			</div>
 			<h2>Stappen</h2>
+
+			<div class="terug">
+				<a title="terug naar inhoud" href="#inhoud"><i class="material-icons">arrow_upward</i></a>
+			</div>
+			<h3>Je eerste webpagina</h3>
 			<p>
+			Als het goed is, zie je nu een omgeving waarin je kunt beginnen aan het maken van je eigen website.
+			</p><p>
+			Maak de eerste pagina aan door in het menu bovenaan te klikken op File, en dan ‘New File’.
+			Nu kun je in het grote zwarte vlak in het midden beginnen met je eerste webpagina.
+			</p><p>
+			Een webpagina ziet er in het begin altijd zo uit als hieronder. Kopiëer en plak dit voorbeeld in het zwarte vlak: 
+			<pre>
+	&lt;html>
+	  &lt;head>
+	    &lt;title>Mijn website&lt;/title>
+	  &lt;/head>
+	  &lt;body>
+	    &lt;h1>Welkom&lt;/h1>
+	  &lt;/body>
+	&lt;/html>
+			</pre>
+			</p><p>
+			In het blokje ‘head’ staat informatie over je site, zoals de titel. In het blok daaronder, de body, staat alles dat te zien is op de pagina, zoals de kop, tekst en plaatjes.
+			</p><p>
+			Deze indeling met <code>&lt;></code>-tekens noemen we HTML. Dat is de taal waarmee je opgeeft wat waar op de pagina komt te staan en hoe het eruit ziet.
+			</p><p>
+			<code>&lt;h1></code> is bijvoorbeeld een HTML-code waarmee je opgeeft dat het een dikgedrukte kop bovenaan de tekst is.
+			</p><p>
+			Bewaar je pagina door in het File-menu op ‘Save’ te klikken.
+			Klik in het venster dat je dan ziet op ‘file name’ en vul daar in: index.php
+			Klik daaronder op je naam en dan onderaan het venster op ‘Save’.
+			</p><p>
+			Nu kun je je webpagina bekijken. Klik op de ‘play’-knop bovenaan:
+			<p>
+				<div class="gecentreerd"><img src="images/play-knop.png" /></div>
+			</p>
+
+
+			<div class="terug">
+				<a title="terug naar inhoud" href="#inhoud"><i class="material-icons">arrow_upward</i></a>
+			</div>
+			<h3>PHP mee laten doen</h3>
+			<p>
+			Je website is nu nog heel eenvoudig – en niet zo slim. Hij laat alleen zien wat jij hebt ingetypt. 
+			</p><p>
+			Je kunt je webpagina er ook steeds anders uit laten zien, door PHP te gebruiken. De programmacodes van PHP kun je gewoon tussen de HTML-code zetten.
+			</p><p>
+			Voeg deze regel toe aan je webpagina, direct onder de regel met <code>&lt;h1></code>:
+			<pre>
+	&lt;?php echo '&lt;p>Hallo wereld&lt;/p>'; ?> 
+			</pre>
+			</p><p>
+			Zo dus:
+			</p><p>
+			<pre>
+	&lt;html>
+	  &lt;head>
+	    &lt;title>Mijn website&lt;/title>
+	  &lt;/head>
+	  &lt;body>
+	    &lt;h1>Welkom&lt;/h1>
+	    &lt;?php echo '&lt;p>Hallo wereld&lt;/p>'; ?> 
+	  &lt;/body>
+	&lt;/html>
+			</pre>
+			Je laat weten waar de PHP-code begint met <code>&lt;?php</code> en sluit het blokje weer af met <code>?></code>. <code>&lt;p></code> is HTML en geeft aan waar een nieuwe alinea begint. Zoals de meeste codes in HTML sluit je die ook weer af, met <code>&lt;/p></code>.
+			</p><p>
+			En klik weer op ‘play’.
+			</p><p>
+			Het enige dat je PHP nu laat doen, is iets laten zien in de browser (het programma waarmee je de website bekijkt). Gelukkig kun je met PHP nog veel slimmere dingen maken, en dat gaan we nu doen.
+			</p>
+
+
+			<div class="terug">
+				<a title="terug naar inhoud" href="#inhoud"><i class="material-icons">arrow_upward</i></a>
+			</div>
+			<h3>Websites slimmer maken</h3>
+			<p>
+			Eén van de manieren waarop je een webpagina wat slimmer kunt maken, is door PHP een beetje te laten meedenken.
+			</p><p>
+			Je kunt bijvoorbeeld steeds iets anders laten zien op basis van het adres (de url) dat een bezoeker intypt om bij jouw webpagina te komen.
+			</p><p>
+			Verander de PHP-regel uit het vorige voorbeeld zodat dit er komt te staan:
+			</p>
+			<pre>
+	&lt;html>
+	  &lt;head>
+	    &lt;title>Mijn website&lt;/title>
+	  &lt;/head>
+	  &lt;body>
+	    &lt;h1>
+	      &lt;?php echo 'Hallo ' . $_REQUEST["naam"] . '!'; ?>
+	    &lt;/h1>
+	  &lt;/body>
+	&lt;/html>
+			</pre>
+			<p>
+			Let erop dat je ook de &lt;p>-codes uit het vorige voorbeeld weghaalt. Let ook op dat de H1-kop pas afsluit n&aacute; de PHP-code. De PHP code moet dus tussen &lt;h1> en &lt;/h1> staan.
+			</p><p>
+			PHP zegt nu met het commando echo ‘Hallo’ tegen een naam die in het webadres van je pagina wordt genoemd. We laten dat zo zien.
+			</p><p>
+			Sla je pagina op (via File en Save) en druk weer op ‘play’.
+			</p><p>
+			Je ziet nu dat de kop van de pagina is veranderd in ‘Hallo !’. Meer niet, want we hebben nog geen naam genoemd in het webadres. 
+			</p><p>
+			Tik in de adresbalk achter het adres van je site ?naam= en dan je naam. Het zou er ongeveer zo uit moeten zien:
+			</p><p>
+			<code>http://jaap-jaap433627.codeanyapp.com/?naam=Steven</code>
+			</p><p>
+			of zo:
+			</p><p>
+			<code>http://jaap-jaap433627.codeanyapp.com/index.php?naam=Steven</code>
+			</p><p>
+			Druk op enter om de pagina opnieuw te laden. 
+			Probeer het daarna nog een paar keer met een andere naam in het adres.
 			</p>
 		</div>
 
@@ -76,7 +204,7 @@
 		</div>
 		<div class="github">
 			<a
-				href="https://github.com/coderdojonijmegen/coding-for-web">
+				href="https://github.com/coderdojonijmegen/coding-for-web-php">
 				<svg aria-hidden="true" class="octicon octicon-mark-github"
 					height="24" version="1.1" viewBox="0 0 16 16" width="24">
 					<path fill-rule="evenodd"
