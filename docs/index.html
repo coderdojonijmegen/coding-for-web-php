@@ -1,5 +1,6 @@
 <html>
 <head>
+<meta charset="UTF-8">
 <title>coding-for-web-php</title>
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans"
 	rel="stylesheet">
@@ -70,7 +71,7 @@
 			Maak de eerste pagina aan door in het menu bovenaan te klikken op File, en dan 'New File'.
 			Nu kun je in het grote zwarte vlak in het midden beginnen met je eerste webpagina.
 			</p><p>
-			Een webpagina ziet er in het begin altijd zo uit als hieronder. Kopiëer en plak dit voorbeeld in het zwarte vlak: 
+			Een webpagina ziet er in het begin altijd zo uit als hieronder. Kopi&euml;er en plak dit voorbeeld in het zwarte vlak: 
 			<pre>
 	&lt;html>
 	  &lt;head>
@@ -93,7 +94,7 @@
 			Klik daaronder op je naam en dan onderaan het venster op 'Save'.
 			</p><p>
 			Nu kun je je webpagina bekijken. Klik op de 'play'-knop bovenaan:
-			<p>
+			</p><p>
 				<div class="gecentreerd"><img src="images/play-knop.png" /></div>
 			</p>
 
@@ -103,7 +104,7 @@
 			</div>
 			<h3>PHP mee laten doen</h3>
 			<p>
-			Je website is nu nog heel eenvoudig – en niet zo slim. Hij laat alleen zien wat jij hebt ingetypt. 
+			Je website is nu nog heel eenvoudig - en niet zo slim. Hij laat alleen zien wat jij hebt ingetypt. 
 			</p><p>
 			Je kunt je webpagina er ook steeds anders uit laten zien, door PHP te gebruiken. De programmacodes van PHP kun je gewoon tussen de HTML-code zetten.
 			</p><p>
@@ -113,7 +114,7 @@
 			</pre>
 			</p><p>
 			Zo dus:
-			</p><p>
+			</p>
 			<pre>
 	&lt;html>
 	  &lt;head>
@@ -138,7 +139,7 @@
 			</div>
 			<h3>Websites slimmer maken</h3>
 			<p>
-			Eén van de manieren waarop je een webpagina wat slimmer kunt maken, is door PHP een beetje te laten meedenken.
+			E&eacute;n van de manieren waarop je een webpagina wat slimmer kunt maken, is door PHP een beetje te laten meedenken.
 			</p><p>
 			Je kunt bijvoorbeeld steeds iets anders laten zien op basis van het adres (de url) dat een bezoeker intypt om bij jouw webpagina te komen.
 			</p><p>
@@ -157,7 +158,7 @@
 	&lt;/html>
 			</pre>
 			<p>
-			Let erop dat je ook de &lt;p>-codes uit het vorige voorbeeld weghaalt. Let ook op dat de H1-kop pas afsluit n&aacute; de PHP-code. De PHP code moet dus tussen &lt;h1> en &lt;/h1> staan.
+			Let erop dat je ook de &lt;p>-codes uit het vorige voorbeeld weghaalt. Let ook op dat de H1-kop pas afsluit n&aacute; de PHP-code. De PHP code moet dus tussen <code>&lt;h1></code> en <code>&lt;/h1></code> staan.
 			</p><p>
 			PHP zegt nu met het commando echo 'Hallo' tegen een naam die in het webadres van je pagina wordt genoemd. We laten dat zo zien.
 			</p><p>
@@ -165,7 +166,7 @@
 			</p><p>
 			Je ziet nu dat de kop van de pagina is veranderd in 'Hallo !'. Meer niet, want we hebben nog geen naam genoemd in het webadres. 
 			</p><p>
-			Tik in de adresbalk achter het adres van je site ?naam= en dan je naam. Het zou er ongeveer zo uit moeten zien:
+			Tik in de adresbalk achter het adres van je site <code>?naam=</code> en dan je naam. Het zou er ongeveer zo uit moeten zien:
 			</p><p>
 			<code>http://jaap-jaap433627.codeanyapp.com/?naam=Steven</code>
 			</p><p>
@@ -176,6 +177,297 @@
 			Druk op enter om de pagina opnieuw te laden. 
 			Probeer het daarna nog een paar keer met een andere naam in het adres.
 			</p>
+
+
+			<div class="terug">
+				<a title="terug naar inhoud" href="#inhoud"><i class="material-icons">arrow_upward</i></a>
+			</div>
+			<h3>Formulieren</h3>
+			<p>
+			Wat je nu zou kunnen doen, is een persoonlijke pagina maken voor elk van je vrienden en familieleden. Door een formulier op die pagina te zetten, kunnen zij meer informatie over zichzelf invullen. Zo maak je je eigen online vriendenboek.
+			</p><p>
+			Maak dit formulier:
+			</p>
+			<pre>
+	&lt;html>
+	  &lt;head>
+	    &lt;title>Vriendenboek van Jaap&lt;/title>
+	  &lt;/head>
+	  &lt;body>
+	    &lt;h1>
+	      &lt;?php echo 'Hallo ' . $_REQUEST["naam"] . '!'; ?>
+	    &lt;/h1>
+	
+	    &lt;form action="resultaten.php" method="post">
+	      &lt;p>
+	        Je voornaam: 
+	        &lt;input type="text" name="naam" value="&lt;?php echo $_REQUEST["naam"]; ?>" />
+	      &lt;/p>
+	      &lt;p>
+	         Hoe oud ben je? 
+	         &lt;input type="text" name="leeftijd" />
+	      &lt;/p>
+	      &lt;p>&lt;input type="submit" value="Opsturen" />&lt;/p>
+	    &lt;/form>
+	
+	  &lt;/body>
+	&lt;/html>
+			</pre>
+			<p>
+			Vul hier je eigen naam in. [bij de titel]
+			</p><p>
+			[als we de naam al weten, dan vult PHP die hier alvast in]
+			</p><p>
+			Voeg zelf nog twee vragen toe voor het vriendenboek: hoe lang ze zijn (in centimeters) en nog iets, zoals bijvoorbeeld wat hun favoriete film is. Let erop dat je elk input-veld een unieke 'name' geeft, dus bijvoorbeeld 'name="lengte"'.
+			</p>
+
+
+			<div class="terug">
+				<a title="terug naar inhoud" href="#inhoud"><i class="material-icons">arrow_upward</i></a>
+			</div>
+			<h3>Resultaten van het formulier</h3>
+			<p>
+			In de code kun je zien dat het formulier de ingevulde informatie doorgeeft aan een andere pagina die resultaten.php heet. Die pagina gaan we nu aanmaken.  
+			</p><p>
+			Ga bij CodeAnywhere naar File en klik op 'New file'.
+			</p><p>
+			Maak een pagina die ongeveer lijkt op die hieronder. Denk eraan dat je het antwoord op je zelfbedachte vraag ook nog moet opvangen.
+			</p>
+			<pre>
+	&lt;html>
+	  &lt;head>
+	    &lt;title>Vriendenboek van Jaap&lt;/title>
+	  &lt;/head>
+	  &lt;body>
+	    &lt;h1>Resultaten&lt;/h1>
+	
+	    &lt;p>Hoi &lt;?=$_REQUEST["naam"]?>, je bent dus &lt;?=$_REQUEST["leeftijd"]?> jaar oud en &lt;?=$_REQUEST["lengte"]?> centimeter lang.&lt;/p>
+	
+	  &lt;/body>
+	&lt;/html>
+			</pre>
+			<p>
+			[dit is een iets andere manier om PHP even snel iets in te laten vullen]
+			</p><p>
+			Sla je nieuwe pagina op (File, en dan Save) en vul bij 'file name' in resultaten.php
+			Klik daaronder op je naam en klik onderaan op Save.
+			Klik weer op 'play'.
+			</p>
+			<p>
+				<div class="gecentreerd"><img src="images/save-as.png" /></div>
+			</p>
+
+
+			<div class="terug">
+				<a title="terug naar inhoud" href="#inhoud"><i class="material-icons">arrow_upward</i></a>
+			</div>
+			<h3>Rekenen met PHP</h3>
+			<p>
+			De informatie die iemand invult, wordt door PHP opgeslagen in variabelen. Variabel betekent dat iets steeds anders kan zijn. In dit geval kan de variabele 'leeftijd' 4 zijn of 12, maar ook 125 of zelfs een woord zoals 'slagroomtaart'.
+			</p><p>
+			Je kunt ook rekenen met die variabelen.
+			</p><p>
+			Dus stel dat iemand heeft ingevuld dat ze 12 is, dan kunnen we uitrekenen wat haar geboortejaar is. 
+			</p><p>
+			 Voeg deze regels toe aan resultaten.php:
+			</p>
+			<pre>
+	&lt;?php
+	$leeftijd = $_REQUEST["leeftijd"];
+	$jaar = 2018;
+	echo "&lt;p>Dat betekent dat je geboren bent in ";
+	echo $jaar - $leeftijd;
+	echo ".&lt;/p>";
+	?>
+			</pre>
+			<p>
+			En bekijken het resultaat door deze pagina op te slaan en je eerste pagina weer te starten.
+			</p>
+			<p>
+				<div class="gecentreerd"><img src="images/geboren-in.png" /></div>
+			</p>
+			<p>
+			Voeg nu zelf de code toe om met PHP te laten zien hoeveel centimeter deze vriend of vriendin langer of korter is dan jij bent.
+			</p>
+
+
+			<div class="terug">
+				<a title="terug naar inhoud" href="#inhoud"><i class="material-icons">arrow_upward</i></a>
+			</div>
+			<h3>Informatie bewaren: cookies</h3>
+			<p>
+			Informatie verzamelen met formuleren en die gegevens opslaan in variabelen is leuk, maar het probleem is dat die informatie weg is als je de browser sluit of naar een andere website gaat. Je bezoeker zal dus elke keer dat hij of zij terugkomt opnieuw het formulier moeten invullen.
+			</p><p>
+			We kunnen dat voorkomen door de informatie op te slaan in cookies (het Engelse woord voor koekjes).
+			</p>
+			<ol>
+			<li>Zet deze code bovenaan in resultaten.php:
+			<pre>
+	&lt;?php
+	  $_COOKIE['bezoek']++;
+	  setcookie('bezoek', $_COOKIE['bezoek']);
+	?>
+			</pre>
+			Het werkt alleen als je deze code vÃ³Ã³r &lt;html> zet, dus dat er niks voor de code naar de browser wordt gestuurd om te laten zien.
+			</li>
+			<li>Zet nu deze regel onderaan de pagina, net boven &lt;/body>:
+			<pre>
+	&lt;small>
+	  Je hebt deze pagina nu &lt;?=$_COOKIE['bezoek']?> keer bekeken.
+	&lt;/small>
+			</pre>
+			<p>
+			[de &lt;small>-code maakt de tekst iets kleiner dan de rest]
+			</p><p>
+			Vernieuw de pagina een paar keer en je zult zien dat de informatie uit de cookie steeds opnieuw wordt bijgewerkt en onthouden.
+			</p></li>
+			<li>Zoals het er nu staat, wordt de cookie ook weer weggegooid als de bezoeker de browser afsluit. Als je wil dat hij of zij de informatie nog wat langer zal kunnen zien, dan moet je de cookie zo opslaan:
+			<pre>
+	setcookie('bezoek', $_COOKIE['bezoek'], time() + 600000);
+			</pre>
+			<p>
+			Op die manier blijft de informatie bewaard tot 600.000 seconden na nu, oftewel een week.
+			</p>
+			</ol>
+
+
+			<div class="terug">
+				<a title="terug naar inhoud" href="#inhoud"><i class="material-icons">arrow_upward</i></a>
+			</div>
+			<h3>Informatie bewaren: tekstbestandjes</h3>
+			<p>
+			Als we echt een vriendenboek willen maken, dan moet de site informatie kunnen opslaan, zodat jij de informatie van je vrienden ook kunt lezen.
+			</p><p>
+			Programmeurs die websites bouwen, gebruiken meestal een database om informatie te bewaren, maar je kunt daar ook een simpel tekstbestandje voor gebruiken.
+			</p><p>
+			Dat werkt als volgt. In resultaten.php, onder de regel met setcookie, zetten we de antwoorden uit het formulier achter elkaar en zetten we die in een tekstbestandje:
+			</p><pre>
+	$tekstbestandje = '/tmp/vrienden.txt';
+	$antwoorden = 
+	  $_REQUEST["naam"] . ";" .
+	  $_REQUEST["leeftijd"]  . ";" . 
+	  $_REQUEST["lengte"] . "\n";  file_put_contents($tekstbestandje, $antwoorden, FILE_APPEND);
+			</pre><p>
+			[Met de punt (.) plakken we in PHP variabelen en tekst aan elkaar. De \n op het eind zorgt ervoor dat er na deze rij een nieuwe regel komt.]
+			</p><p>
+			[FILE_APPEND zorgt ervoor dat we steeds een nieuwe regel toevoegen aan het tekstbestandje, in plaats van dat de antwoorden het enige zijn dat erin komt te staan]
+			</p><p>
+			Voeg je eigen variabelen toe aan $antwoorden (die van de extra vragen die je in het formulier hebt gezet). Zorg er wel voor dat er steeds weer een puntkomma tussen komt te staan, want zo houden we de variabelen uit elkaar.
+			</p>
+
+
+			<div class="terug">
+				<a title="terug naar inhoud" href="#inhoud"><i class="material-icons">arrow_upward</i></a>
+			</div>
+			<h3>Tekstbestand lezen</h3>
+			<p>
+			Nu gaan we een pagina maken waar je ziet wie jouw vragenlijst hebben ingevuld.
+			</p><p>
+			Ga bij CodeAnywhere naar File en klik op 'New file'.
+			Zet deze code erin om het tekstbestand te lezen en te laten zien wat erin staat:
+			</p><pre>
+	&lt;html>
+	  &lt;html>
+	  &lt;head>
+	    &lt;title>Vriendenboek van Jaap&lt;/title>
+	  &lt;/head>
+	  &lt;body>
+	    &lt;h1>Vrienden&lt;/h1>
+	
+	    &lt;?php
+	    
+	    $tekstbestand = fopen("/tmp/vrienden.txt", "r");
+	    
+	    while( ! feof($tekstbestand) ) {
+	
+	      $vriend = explode(";", fgets($tekstbestand));
+	      echo $vriend[0] . " is " . $vriend[1] . " jaar en $vriend[2] cm lang.&lt;br>";
+	
+	    }
+	    
+	    fclose($tekstbestand);
+	    
+	    ?>
+	    
+	  &lt;/body>
+	&lt;/html>
+			</pre><p>
+			[Het uitroepteken betekent 'niet', feof betekent 'het eind van het bestand' en fgets betekent 'haal een nieuwe regel van het bestand op'. Hier staat dus: laat een nieuwe regel zien zolang we nog niet onderaan het tekstbestand zijn.]
+			</p><p>
+			[Met 'explode' hakken we de regel in stukjes. Waar een puntkomma staat begint een nieuwe variabele. $vriend wordt zo een lijst en dat noemen we in PHP een array. De lijst is genummerd en begint bij 0, en daarom vinden we de naam met $vriend[0]. ]
+			</p><p>
+			Sla je nieuwe pagina op (File, en dan Save) en vul bij 'file name' in vrienden.php
+			Klik daaronder op je naam en klik onderaan op Save.
+			Klik weer op 'play'.
+			</p>
+			<p>
+				<div class="gecentreerd"><img src="images/save-as-vrienden.png" /></div>
+			</p>
+			<p>
+			Ga naar je nieuwste pagina door achter het webadres /vrienden.php te zetten en op enter te drukken.
+			</p><p>
+			Het adres zou er ongeveer zo uit moeten zien:
+			</p><p>
+			<code>http://jaap-jaap433627.codeanyapp.com/vrienden.php</code>
+			</p><p>
+			Als je ziet wat je zelf daarstraks hebt ingevuld in het formulier, dan werkt het!
+			Ga terug naar de eerste pagina om het formulier nog een paar keer in te vullen, om alles te testen.
+			</p>
+
+
+			<div class="terug">
+				<a title="terug naar inhoud" href="#inhoud"><i class="material-icons">arrow_upward</i></a>
+			</div>
+			<h3>Jaren en dagen</h3>
+			<p>
+			Dit deel is nog niet af :(
+			</p><pre>
+	[Aantal dagen uitrekenen tot je verjaardag, hoeveel dagen je al leeft, hoeveel Saturnus-jaren je al bent, hoeveel dagen je ouder of jonger bent dan je vriend.
+	> formulier aanpassen zodat we ook de dag van de maand en de maand hebben voor de geboortedatum
+	> Datetime-object maken
+	> link naar info over rekenen met data (zodat we ook leren hoe je documentatie over functies kunt vinden op PHP.org)
+	]
+			</pre>
+
+
+			<div class="terug">
+				<a title="terug naar inhoud" href="#inhoud"><i class="material-icons">arrow_upward</i></a>
+			</div>
+			<h3>Hyperlinks</h3>
+			<p>
+			Dit deel is nog niet af :(
+			</p><pre>
+	[unordered list maken met voor elke vriend een aparte link naar een nieuw bestand, waar we alle info laten zien over die vriend op basis van de 
+		meegegeven naam-parameter. Op die pagina moeten we dus met while en if bekijken welke regel van het bestand we moeten gebruiken.]
+			</pre>
+
+
+			<div class="terug">
+				<a title="terug naar inhoud" href="#inhoud"><i class="material-icons">arrow_upward</i></a>
+			</div>
+			<h3>Plaatjes maken met PHP</h3>
+			<p>
+			Dit deel is nog niet af :(
+			</p><pre>
+	[plaatje met lievelingskleur genereren
+	> formulier aanpassen zodat we ook de lievelingskleur weten
+	> 
+			</pre>
+			
+
+
+			<div class="terug">
+				<a title="terug naar inhoud" href="#inhoud"><i class="material-icons">arrow_upward</i></a>
+			</div>
+			<h3>To do:</h3>
+			<p>
+			<pre>
+	â€¢	een mail sturen sturen met iemands eigen url (zou je ook kunnen doen als iemand jarig is of een nieuwe entry wordt gedaan)
+	â€¢	mensen in laten loggen met een wachtwoord
+	â€¢	tekst aanpassen aan of het ochtend of middag is
+			</pre>
+			</p>
+			
 		</div>
 
 		<div id="conclusie">
@@ -193,6 +485,13 @@
 			</div>
 			<h2>Vervolg</h2>
 			<p>
+			Meer informatie:
+			<ul>
+				<li><a href="https://stackoverflow.com/questions/441087/php-exercises" target="_blank">https://stackoverflow.com/questions/441087/php-exercises</a></li>
+				<li><a href="https://www.phphulp.nl/php/tutorial/overig/php-beginners-handleiding/575/variabelen/1482/" target="_blank">https://www.phphulp.nl/php/tutorial/overig/php-beginners-handleiding/575/variabelen/1482/</a></li>
+				<li><a href="https://www.phphulp.nl/php/tutorials/php-functies/6/" target="_blank">https://www.phphulp.nl/php/tutorials/php-functies/6/</a></li>
+				<li><a href="https://www.w3resource.com/php-exercises/php-basic-exercises.php" target="_blank">https://www.w3resource.com/php-exercises/php-basic-exercises.php</a></li>
+			</ul>
 			</p>
 		</div>
 
