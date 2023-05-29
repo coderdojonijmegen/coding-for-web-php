@@ -4,7 +4,7 @@ date: 2020-11-18T23:07:16+01:00
 draft: false
 toc: true
 headercolor: "teal-background"
-taal: PHP
+onderwerp: PHP
 ---
 
 We gaan programmeren met PHP.
