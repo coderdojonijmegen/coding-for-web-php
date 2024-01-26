@@ -115,11 +115,11 @@ Je ziet nu dat de kop van de pagina is veranderd in 'Hallo !'. Meer niet, want w
 
 Tik in de adresbalk achter het adres van je site ?naam= en dan je naam. Het zou er ongeveer zo uit moeten zien:
 
-http://jaap-jaap433627.codeanyapp.com/?naam=Steven
+	<sitenaam>/?naam=Steven
 
 of zo:
 
-http://jaap-jaap433627.codeanyapp.com/index.php?naam=Steven
+	<sitenaam>/index.php?naam=Steven
 
 Druk op enter om de pagina opnieuw te laden. Probeer het daarna nog een paar keer met een andere naam in het adres.
 
@@ -316,7 +316,7 @@ Ga naar je nieuwste pagina door achter het webadres /vrienden.php te zetten en o
 
 Het adres zou er ongeveer zo uit moeten zien:
 
-http://jaap-jaap433627.codeanyapp.com/vrienden.php
+	<sitenaam>/vrienden.php
 
 Als je ziet wat je zelf daarstraks hebt ingevuld in het formulier, dan werkt het! Ga terug naar de eerste pagina om het formulier nog een paar keer in te vullen, om alles te testen.
 
@@ -343,14 +343,13 @@ Dit deel is nog niet af :(
 	> 
 			
 ### To do:
-* een mail sturen sturen met iemands eigen url (zou je ook kunnen doen als iemand jarig is of een nieuwe entry wordt gedaan)
+* een mail sturen met iemands eigen url (zou je ook kunnen doen als iemand jarig is of een nieuwe entry wordt gedaan)
 * mensen in laten loggen met een wachtwoord
 * tekst aanpassen aan of het ochtend of middag is
 			
 ## Vervolg
 Meer informatie:
 
-* https://stackoverflow.com/questions/441087/php-exercises
 * https://www.phphulp.nl/php/tutorial/overig/php-beginners-handleiding/575/variabelen/1482/
 * https://www.phphulp.nl/php/tutorials/php-functies/6/
 * https://www.w3resource.com/php-exercises/php-basic-exercises.php
